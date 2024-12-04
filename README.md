@@ -94,13 +94,13 @@ We will assess your work based on:
 - [ ] Implement basic routing for the Home Page and Shopping Cart Page. (`/`, `/cart`)
 - [ ] Add basic styling to the application using CSS or a CSS framework. 
 
-### Create the Home Page:
+### Create the Home Page:!!!!!!!!!!!!!!!
 - [ ] Create a table or grid of cards to display the list of products.
 - [ ] Fetch the product data from the API (https://fakestoreapi.com/products).
 - [ ] Display the product details (image, name, price, category).
 - [ ] Add a button to add the product to the shopping cart.
 - [ ] Add a button to remove the product from the shopping cart.
-- [ ] Implement filtering by category and sorting by price (asc/desc).
+- [ ] Implement filtering by category and sorting by price (asc/desc).!!!!!!!!!!!!
 ### Create the Shopping Cart Page:
 - [ ] Display the list of products added to the shopping cart.
 - [ ] Allow users to change the quantity of products in the cart.

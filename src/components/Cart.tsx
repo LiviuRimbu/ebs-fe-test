@@ -7,9 +7,8 @@ import ImageBtn from "@/components/ui/ImageBtn.tsx"
 import trash from "@/assets/images/trash.svg";
 
 const Cart: React.FC = () => {
-	const { cart, removeFromCart, clearCart, incrQuantity, decrQuantity } =
-		useCart();
-	const totalSum =  parseFloat(cart.reduce((sum, item) => sum + item.quantity, 0).toFixed(2));
+	const { cart, removeFromCart, clearCart, incrQuantity, decrQuantity } = useCart();
+	const totalSum =parseFloat(cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2));
 	return (
 		<div className="p-4">
 			<h2 className="text-2xl font-bold mb-4">Cart</h2>
@@ -39,7 +38,7 @@ const Cart: React.FC = () => {
 										Quantity: {item.quantity}
 									</p>
 									<p className="text-sm text-gray-600">
-										Total: ${item.price * item.quantity}
+										Total: ${parseFloat((item.price * item.quantity).toFixed(2))}
 									</p>
 								</div>
 								<div className="flex flex-row items-center gap-2">
