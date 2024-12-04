@@ -1,10 +1,12 @@
 import AppRoutes from "./routes/AppRoutes";
+import {CartProvider} from "./context/CartContext.tsx"
 
 function App() {
   return (
     <div className="flex flex-col items-center">
-        {/*<Header />*/}
-        <AppRoutes />
+        <CartProvider>
+            <AppRoutes />
+        </CartProvider>
     </div>
   );
 }

@@ -1,45 +1,42 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { fetchProductsByCategory } from "../services/api";
+import React, { useState } from "react";
+
+import NavMenuBtn from "./ui/NavMenuBtn.tsx"
+import MenuList from "./ui/MenuList.tsx"
 
 interface Category {
 	id: string;
 	name: string;
-	request: string;
 }
 
 const Navbar: React.FC = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+
 	const categories: Category[] = [
-		{ id: "electronics", name: "Electronics", request: "electronics" },
-		{ id: "jewelery", name: "Jewelery", request: "jewelery" },
-		{ id: "mens-clothing", name: "Men's Clothing", request: "men's clothing" },
-		{ id: "womens-clothing", name: "Women's Clothing", request: "women's clothing" },
+		{ id: "electronics", name: "Electronics" },
+		{ id: "jewelery", name: "Jewelery" },
+		{ id: "mens-clothing", name: "Men's Clothing" },
+		{ id: "womens-clothing", name: "Women's Clothing" },
 	];
 
-	const handleCategoryClick = async (category: string) => {
-		try {
-			const fetchedProducts = await fetchProductsByCategory(category);
-			console.log(fetchedProducts, category);
-		} catch (error) {
-			console.error("Error fetching category:", error);
-		}
-	};
 
 	return (
-		<nav className="text-white p-4">
-			<ul className="flex flex-row space-x-4">
-				{categories.map((category) => (
-					<li key={category.id}>
-						<Link
-							to={`/${category.id}`}
-							className="hover:underline"
-							onClick={() => handleCategoryClick(category.request)}
-						>
-							{category.name}
-						</Link>
-					</li>
-				))}
-			</ul>
+		<nav className="top-0 bg-gray-800 text-white p-4 ">
+			<div className="flex items-center">
+				<button
+					className="sm:hidden absolute top-[45%] right-4 text-white"
+					onClick={() => setMenuOpen(!menuOpen)}
+					aria-label="Toggle menu"
+				>
+					<NavMenuBtn isOpen={menuOpen} />
+				</button>
+				<MenuList isMobile={false} categories={categories} />
+			</div>
+
+			{menuOpen && (
+				<div className="fixed top-[14vh] left-0 w-full h-full bg-black bg-opacity-95 z-10">
+					<MenuList isMobile={true} categories={categories} setMenuOpen={setMenuOpen} />
+				</div>
+			)}
 		</nav>
 	);
 };

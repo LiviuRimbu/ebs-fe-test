@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import NotFound from "../components/NotFound.tsx"
-import CategoryPage from "../components/Categories.tsx"
+import CategoryPage from "../pages/Categories.tsx"
 
 
 const AppRoutes: React.FC = () => {

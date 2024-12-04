@@ -1,16 +1,21 @@
 import React from "react";
 
 import Navbar from "./Navbar.tsx"
-// import icon from "../assets/icons/icon.ico"
+import CartBtnWithCounter from "./CartBtnWithCounter";
+
+
+
 export const Header: React.FC = () => {
   return (
-      <div className="flex items-center justify-center bg-gray-800 w-[100vw]  ">
-          {/*<img*/}
-          {/*    src={icon}*/}
-          {/*    alt="Home Icon"*/}
-          {/*    className="h-[60px] w-[60px] ml-2"*/}
-          {/*/>*/}
+      <div className="sticky w-[100vw] -top-1 right-0 z-50 flex flex-row items-center sm:justify-between bg-gray-800 h-[20vh] border-none shadow-none px-6">
+
+          <div className="text-white ">Logo</div>
+
           <Navbar/>
+
+          <CartBtnWithCounter />
+
+
       </div>
   );
 };
