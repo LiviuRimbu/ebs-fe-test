@@ -50,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product , buttonClassName,car
 					src={product.image}
 					alt={product.title}
 					className={`${
-						inCart ? "w-[50%] h-[10vh] object-contain mb-4" : "w-full h-40 object-contain mb-4"
+						inCart ? "w-[60px] h-[60px] object-contain mb-4" : "w-full h-40 object-contain mb-4"
 					}`}
 					loading="lazy"
 				/>
@@ -63,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product , buttonClassName,car
 				{product.title}
 			</CardTitle>
 			<CardFooter>
-				<p className="text-sm text-gray-600 mt-2">Price: ${product.price}</p>
+				<p className="text-sm text-gray-600 mt-2">${product.price}</p>
 			</CardFooter>
 			<ImageBtn
 				onClick={handleAddToCart}

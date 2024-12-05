@@ -12,7 +12,7 @@ const Cart: React.FC = () => {
 	const { cart, removeFromCart, clearCart, incrQuantity, decrQuantity } = useCart();
 	const totalSum =parseFloat(cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2));
 	return (
-		<div className="p-4">
+		<div className="">
 			<h2 className="text-2xl font-bold mb-4">Cart</h2>
 			{cart.length === 0 ? (
 				<p className="text-gray-600">Your cart is empty.</p>
