@@ -1,4 +1,6 @@
 import React from "react";
+import {useTranslation} from "react-i18next";
+
 
 interface SortDropdownProps {
     value: "asc" | "desc" | "none";
@@ -6,20 +8,22 @@ interface SortDropdownProps {
 }
 
 const SortDropdown: React.FC<SortDropdownProps> = ({value, onChange}) => {
+    const {t} = useTranslation();
+
     return (
         <div className="mb-4">
             <label htmlFor="sort" className="mr-2 font-semibold">
-                Sort by price:
+                {t("sort-by-price")}
             </label>
             <select
                 id="sort"
                 value={value}
                 onChange={(e) => onChange(e.target.value as "asc" | "desc")}
-                className="p-2 border rounded"
+                className="border rounded"
             >
-
-                <option value="asc">Low to High</option>
-                <option value="desc">High to Low</option>
+                <option value="asc">{t("none")}</option>
+                <option value="asc">{t("low-to-high")}</option>
+                <option value="desc">{t("high-to-low")}</option>
             </select>
         </div>
     );

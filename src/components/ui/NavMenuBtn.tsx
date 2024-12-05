@@ -1,10 +1,10 @@
 import React from "react";
 
-interface HamburgerMenuProps {
+interface NavMenuBtnProps {
 	isOpen: boolean;
 }
 
-const NavMenuBtn: React.FC<HamburgerMenuProps> = ({ isOpen }) => (
+const NavMenuBtn: React.FC<NavMenuBtnProps> = ({ isOpen }) => (
 	<div className={`space-y-2 ${isOpen ? "mt-[10px] transform" : ""}`}>
 		{isOpen ? (
 			<div className="mr-1 mb-1">

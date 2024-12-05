@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 
-import { fetchProductsByCategory } from "../services/api.ts";
-import { stringUtils } from "../utils/stringUtils.ts";
+import {fetchProductsByCategory} from "../services/api.ts";
+import {stringUtils} from "../utils/stringUtils.ts";
 import ProductLoader from "../components/skeletons/ProductLoader.tsx";
 import ProductCard from "@/components/ProductCard.tsx";
-import { Product } from "@/interfaces/Product.ts";
+import {Product} from "@/interfaces/Product.ts";
 import SortByPrice from "@/components/SelectSortType.tsx";
-import { handleSort } from "@/utils/sortUtils.ts";
+import {handleSort} from "@/utils/sortUtils.ts";
 
 const CategoryPage: React.FC = () => {
-    const { categoryId } = useParams<{ categoryId: string }>();
+    const {categoryId} = useParams<{ categoryId: string }>();
     const correctCategoryId = categoryId ? stringUtils(categoryId) : "default-category";
 
     const [products, setProducts] = useState<Product[]>([]);
@@ -47,22 +47,21 @@ const CategoryPage: React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold my-4 capitalize">{correctCategoryId}</h1>
-
             <SortByPrice
                 value={sortOrder}
-                onChange={handleSortChange} // Use the local handler
+                onChange={handleSortChange}
             />
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
                 {loading ? (
-                    <ProductLoader count={10} />
+                    <ProductLoader count={10}/>
                 ) : (
                     products.map((product) => (
                         <li
                             key={product.id}
                             className="relative rounded-2xl shadow bg-white cursor-pointer hover:shadow-lg hover:scale-105"
                         >
-                            <ProductCard product={product} />
+                            <ProductCard product={product}/>
                         </li>
                     ))
                 )}

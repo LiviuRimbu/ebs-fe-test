@@ -1,0 +1,17 @@
+{
+  "electronics": "Electronice",
+  "jewelery": "Bijuterii",
+  "mens-clothing": "Îmbrăcăminte pentru bărbați",
+  "womens-clothing": "Îmbrăcăminte pentru femei",
+  "cart": "Coș",
+  "quantity": "Cantitate",
+  "price": "Preț",
+  "btn": "Golește coșul",
+  "total": "Total",
+  "total-cart": "Total coș",
+  "items": "Produse",
+  "sort-by-price": "Sortare după preț",
+  "none": "Niciunul",
+  "low-to-high": "Crescător",
+  "high-to-low": "Descrescător"
+}

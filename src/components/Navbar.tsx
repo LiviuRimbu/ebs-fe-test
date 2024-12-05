@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import NavMenuBtn from "./ui/NavMenuBtn.tsx"
 import MenuList from "./ui/MenuList.tsx"
+import {Button} from "@/components/ui/button.tsx";
+
 
 interface Category {
 	id: string;
@@ -22,18 +24,19 @@ const Navbar: React.FC = () => {
 	return (
 		<nav className="top-0 bg-gray-800 text-white p-4 ">
 			<div className="flex items-center">
-				<button
+				<Button
 					className="sm:hidden absolute top-[45%] right-4 text-white"
 					onClick={() => setMenuOpen(!menuOpen)}
-					aria-label="Toggle menu"
+					
 				>
 					<NavMenuBtn isOpen={menuOpen} />
-				</button>
+				</Button>
 				<MenuList isMobile={false} categories={categories} />
 			</div>
 
 			{menuOpen && (
 				<div className="fixed top-[14vh] left-0 w-full h-full bg-black bg-opacity-95 z-10">
+
 					<MenuList isMobile={true} categories={categories} setMenuOpen={setMenuOpen} />
 				</div>
 			)}

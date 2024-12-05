@@ -14,7 +14,7 @@ You will create a simple **Product Catalog** application where users can browse 
 
 ## What We Expect
 1. **Core Features**:
-    - A **Home Page** displaying a list of products with their details (e.g., image, name, price, category). 
+    - !!!!!A **Home Page** displaying a list of products with their details (e.g., image, name, price, category). 
     - A **Shopping Cart Page** listing products added to the "Shopping Cart"
     - A **Filter and Sort Feature** allowing users to filter products by category and to sort by price.
     - **Add to Cart** and **Remove from Cart** functionality for each product.
@@ -22,26 +22,26 @@ You will create a simple **Product Catalog** application where users can browse 
     - **Clear Cart** button to remove all products from the cart.
 2. **Technical Implementation**:
     - Fetch product data from a public mock API (https://fakestoreapi.com/). 
-    - Use `useState` for local state and Context API for managing the "Shopping Cart" list. 
-    - Ensure components are reusable and well-structured with appropriate TypeScript types. Example of reusable components: Button, Table, Card.
+    - Use `useState` for local state and !!!!!!!Context API for managing the "Shopping Cart" list. 
+    - Ensure components are reusable and well-structured with appropriate TypeScript types. Example of reusable components: Button, !!!!Table, Card.
     - Implement base layout with header(with navigation), footer, and main content area. It will serve as a template for the Home and Cart pages.
-    - Implement basic routing using React Router for navigation between pages.
+    - Implement basic routing using !!!!!React Router for navigation between pages.
     - Use TypeScript for static typing and defining interfaces.
 3. **Styling**:
     - Create a user-friendly interface with basic CSS styling (optional: use a CSS framework like TailwindCSS or Styled-Components).
 4. **Testing**:
-    - Write at least one unit test using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) or Jest.
+    -!!!!!!! Write at least one unit test using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) or Jest.
 5. **Version Control**:
     - Use Git to manage your code, with a clear and meaningful commit history (tip: use [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/) ).
 
 ### Bonus Points
 The bonus points are **optional** features that you can implement to enhance the application and showcase your skills. You can choose one or more of the following:
-- **Responsive Design**: Make the application responsive for different screen sizes(mobile size it's enough). (tip: use media queries).
+- **Responsive Design**: Make the application responsive for different screen sizes(mobile size it's enough).!!!!!!! (tip: use media queries).
 - **Error Handling**: Implement error handling for API requests and user interactions. (tip: show error messages to users).
 - **Loading State**: Add loading indicators or skeleton screens to improve the user experience. (tip: use loading state for API requests).
 - **Accessibility**: Ensure the application is accessible and follows best practices for web accessibility. (tip: use semantic HTML elements).
 - **Additional Features**: Add any additional features or enhancements you think would improve the application. (tip: product details modal/page, search functionality).
-- **Documentation**: Provide a README with clear instructions on how to run the application and a brief description of your approach and any important decisions made.
+- !!!!**Documentation**: Provide a README with clear instructions on how to run the application and a brief description of your!!!!! approach and any important decisions made.
 - **Creativity**: Feel free to add your own creative touch or features to the application.
 
 ### Super Bonus Points
@@ -100,7 +100,7 @@ We will assess your work based on:
 - [ ] Display the product details (image, name, price, category).
 - [ ] Add a button to add the product to the shopping cart.
 - [ ] Add a button to remove the product from the shopping cart.
-- [ ] Implement filtering by category and sorting by price (asc/desc).!!!!!!!!!!!!
+- [ ] Implement filtering by category and sorting by price (asc/desc).
 ### Create the Shopping Cart Page:
 - [ ] Display the list of products added to the shopping cart.
 - [ ] Allow users to change the quantity of products in the cart.

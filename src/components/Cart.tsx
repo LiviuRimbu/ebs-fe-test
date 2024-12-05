@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button.tsx";
 import ProductCard from "@/components/ProductCard.tsx";
 import ImageBtn from "@/components/ui/ImageBtn.tsx"
 import trash from "@/assets/images/trash.svg";
+import {useTranslation} from "react-i18next";
 
 const Cart: React.FC = () => {
+	const {t} = useTranslation();
 	const { cart, removeFromCart, clearCart, incrQuantity, decrQuantity } = useCart();
 	const totalSum =parseFloat(cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2));
 	return (
@@ -35,7 +37,7 @@ const Cart: React.FC = () => {
 							<div className="flex flex-row justify-between w-full mt-4">
 								<div>
 									<p className="text-sm text-gray-600">
-										Quantity: {item.quantity}
+										{t("quantity")}: {item.quantity}
 									</p>
 									<p className="text-sm text-gray-600">
 										Total: ${parseFloat((item.price * item.quantity).toFixed(2))}
@@ -72,9 +74,9 @@ const Cart: React.FC = () => {
 						className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700"
 						onClick={clearCart}
 					>
-						Clear Cart
+						{t("btn")}
 					</Button>
-					<p className="text-sm sm:text-3xl ">Total cart: ${totalSum}</p>
+					<p className="text-sm sm:text-3xl ">{t("total-cart")}: ${totalSum}</p>
 				</div>
 			)}
 		</div>

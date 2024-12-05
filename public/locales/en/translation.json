@@ -1,0 +1,17 @@
+{
+  "electronics": "Electronics",
+  "jewelery": "Jewelry",
+  "mens-clothing": "Men's Clothing",
+  "womens-clothing": "Women's Clothing",
+  "cart": "Cart",
+  "quantity": "Quantity",
+  "price": "Price",
+  "btn": "Clear Cart",
+  "total": "Total",
+  "total-cart": "Total Cart",
+  "items": "Items",
+  "sort-by-price": "Sort by Price",
+  "none": "None",
+  "low-to-high": "Low to High",
+  "high-to-low": "High to Low"
+}
