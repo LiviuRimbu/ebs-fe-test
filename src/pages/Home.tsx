@@ -26,7 +26,11 @@ const HomePage: React.FC = () => {
 			}
 		};
 
-		fetchProducts();
+		// Call the async function and handle its promise
+		fetchProducts().catch((err) => {
+			console.error("Unhandled error in fetchProducts:", err);
+			setError("Unexpected error occurred.");
+		});
 	}, []);
 
 	const handleSortChange = (order: "asc" | "desc" | "none") => {

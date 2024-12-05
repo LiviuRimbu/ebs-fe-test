@@ -33,7 +33,12 @@ const CategoryPage: React.FC = () => {
                 setLoading(false);
             }
         };
-        fetchProducts();
+
+        // Call the async function and handle its promise
+        fetchProducts().catch((err) => {
+            console.error("Unhandled error in fetchProducts:", err);
+            setError("Unexpected error occurred.");
+        });
     }, [correctCategoryId]);
 
     const handleSortChange = (order: "asc" | "desc" | "none") => {

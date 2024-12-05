@@ -5,7 +5,13 @@ import {Button} from "@/components/ui/button.tsx";
 const LanguageSwitcher: React.FC = () => {
 
     const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
+        i18n.changeLanguage(lng)
+            .then(() => {
+                console.log(`Language changed to ${lng}`);
+            })
+            .catch((err) => {
+                console.error(`Failed to change language: ${err}`);
+            });
     };
 
     return (
