@@ -5,17 +5,11 @@ import {Button} from "@/components/ui/button.tsx";
 const LanguageSwitcher: React.FC = () => {
 
     const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng)
-            .then(() => {
-                console.log(`Language changed to ${lng}`);
-            })
-            .catch((err) => {
-                console.error(`Failed to change language: ${err}`);
-            });
+        i18n.changeLanguage(lng);
     };
 
     return (
-        <div className="text-white mt-[1rem] border-l border-r">
+        <div className="text-white mt-[1rem]">
             <Button onClick={() => changeLanguage('en')}>EN</Button>
             <Button onClick={() => changeLanguage('ro')}>RO</Button>
             <Button onClick={() => changeLanguage('ru')}>RU</Button>

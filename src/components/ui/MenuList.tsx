@@ -20,9 +20,14 @@ const MenuList: React.FC<MenuListProps> = ({isMobile = false, categories, setMen
             className={`${
                 isMobile
                     ? "flex flex-col space-y-2 absolute top-0 -right-1 sm:hidden bg-opacity-50 p-4 rounded-md shadow-lg h-[100vh] z-20"
-                    : "hidden sm:flex flex-row space-x-4 ml-auto"
+                    : "hidden sm:flex flex-row items-center justify-center space-x-4 ml-auto"
             }`}
         >
+            <Link to={`/`}>
+                        <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white hover:text-blue-600 mr-[2vw]">
+                            HOME
+                        </span>
+            </Link>
             {categories.map((category) => (
                 <li key={category.id}>
                     <Link
@@ -32,12 +37,13 @@ const MenuList: React.FC<MenuListProps> = ({isMobile = false, categories, setMen
                         }`}
                         onClick={() => isMobile && setMenuOpen?.(false)}
                     >
-						<span className={`text-lg sm:text-xl md:text-2xl lg:text-3xl`}>
+						<span className={`text-sm sm:text-md md:text-xl lg:text-3xl`}>
 							{t(`${category.id}`)}
 						</span>
                     </Link>
                 </li>
             ))}
+
         </ul>
     );
 };
