@@ -25,7 +25,7 @@ This is a simple Product Catalog application  built with **React**, leveraging *
 
 ### Key Decisions
 1. **Separate Pages for Each Category**
-2. - This decision was made to streamline the user experience by allowing users to focus on a single category at a time.
+    - This decision was made to streamline the user experience by allowing users to focus on a single category at a time.
 2. **Multilingual Support**:
     - Integrated **react-i18next** to offer a seamless language-switching experience for English, Romanian, and Russian users, ensuring accessibility for a wider audience.
 4. **Deployment on Vercel**:
@@ -33,7 +33,7 @@ This is a simple Product Catalog application  built with **React**, leveraging *
 
 
 ##  Live Demo
-Check out the live application [here](https://your-vercel-link.vercel.app).
+Check out the live application [here](https://ebs-fe-test.vercel.app/).
 
 ---
 
